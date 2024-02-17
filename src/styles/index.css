@@ -1,0 +1,148 @@
+@import url("./fonts.css");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Vazirmatn;
+}
+body {
+  font-family: Vazirmatn;
+  line-height: 1.7;
+  font-size: 1.4rem;
+  background-color: var(--color-white);
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+:root {
+  --color-badges: #afcedd;
+  --color-primary: #1e1e1e;
+  --color-primary-second: #696969;
+  --color-buttons: #219f95;
+  --color-white: #fff;
+  --color-h2: #234894;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+/* BADGE */
+
+.badge {
+  background-color: var(--color-badges);
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-h2);
+}
+
+/* Buttons */
+
+.btn {
+  width: 150px;
+  height: 65px;
+  background-color: var(--color-buttons);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 3rem;
+}
+
+.cards {
+  /* width: 400px; */
+  max-width: 450px;
+  min-width: 300px;
+  height: auto;
+  padding: 1.6rem;
+  margin-top: 3.5rem;
+}
+
+.cards__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards__header-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards__header-title-text {
+  margin-right: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-buttons);
+}
+.cards__header-date {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-primary-second);
+}
+
+.cards__content {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cards__content-text {
+  font-size: 1.2rem;
+}
+
+.cards__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.btn-text {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
